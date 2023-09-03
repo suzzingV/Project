@@ -1,0 +1,12 @@
+<mapper namespace = "NoticeBoard.noticeboard.mapper.BoardMapper">
+
+    <select id="boardCount" resultType = "int"> //id와 BoardMapper.interface의 메소드가 같음
+        SELECT count(boardId) AS cnt FROM tbl_board //게시글 수 반환
+    </select>
+
+    <select id = "getList" resultType="NoticeBoard.noticeboard.domain.Board">
+        SELECT
+        *
+        FROM tbl_board; //게시글 리스트 반환
+    </select>
+</mapper>
