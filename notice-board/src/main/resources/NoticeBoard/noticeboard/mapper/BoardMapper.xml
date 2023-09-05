@@ -12,4 +12,11 @@
         *
         FROM tbl_board;
     </select>
+
+    <select id = "getBoard" parameterType="Long" resultType="NoticeBoard.noticeboard.domain.Board">
+        SELECT
+        *
+        FROM tbl_board
+        where boardId=#{boardId};
+    </select>
 </mapper>
