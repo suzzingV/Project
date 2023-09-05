@@ -15,6 +15,7 @@ public class BoardService {
 
     private final BoardMapper boardMapper;
 
+
     public int boardCount() {
         return boardMapper.boardCount();
     }
