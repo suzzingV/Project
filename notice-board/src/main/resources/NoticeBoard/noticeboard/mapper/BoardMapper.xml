@@ -13,10 +13,9 @@
         FROM tbl_board;
     </select>
 
-    <select id = "getBoard" parameterType="Long" resultType="NoticeBoard.noticeboard.domain.Board">
-        SELECT
-        *
-        FROM tbl_board
-        where boardId=#{boardId};
-    </select>
+    <insert id="uploadBoard" parameterType="com.example.blog.board.domain.Board">
+        INSERT INTO tbl_board (title, content, name)
+        VALUES
+            (#{title}, #{content}, #{name}});
+    </insert>
 </mapper>
