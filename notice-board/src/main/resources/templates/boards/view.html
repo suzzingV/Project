@@ -12,5 +12,10 @@
   내용 : <textarea class = "form-control" th:text="${view.content}"></textarea>
   <p>조회수 : [[${view.read}]]</p>
 </div>
+
+<button id = "deleteBtn" class="btn btn-danger btn-sm float-right">삭제</button>
+<button id = "updateBtn" class="btn-info btn-sm float-right">수정</button>
+
+<form id="form" th:action="@{/}" method="post"></form>
 </body>
 </html>
