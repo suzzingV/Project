@@ -19,10 +19,10 @@
 </div>
 
 <script th:inline="javascript">
-$(document).on('ready', function (e) {
-var form= $("#form");
-var boardId= [[${view.boardId}]];
-$(document).on('click', '#deleteBtn', function (e) {
+  $(document).on('ready', function (e) {
+  var form= $("#form");
+  var boardId= [[${view.boardId}]];
+  $(document).on('click', '#deleteBtn', function (e) {
 $('#form').attr("action","delete");
 form.append("<input type='hidden' name='boardId' value='"+boardId+"'>");
 form.append("<input type='hidden' name='_method' value='delete'>");
