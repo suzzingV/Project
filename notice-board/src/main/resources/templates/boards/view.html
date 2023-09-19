@@ -23,19 +23,19 @@
   var form= $("#form");
   var boardId= [[${view.boardId}]];
   $(document).on('click', '#deleteBtn', function (e) {
-$('#form').attr("action","delete");
-form.append("<input type='hidden' name='boardId' value='"+boardId+"'>");
-form.append("<input type='hidden' name='_method' value='delete'>");
-form.submit();
-})
-$(document).on('click','#updateBtn',function (e) {
-var str="<input class='form-control' width='250'" +
-"placeholder='제목 입력' id='updateTitle'>";
-$("#title").html(str);
-str="<textarea class='form-control' placeholder='내용 입력'" +
-"id='updateContent'></textarea>";
-$("#content").html(str);
-$("#updateBtn").attr("id","updateConfirmBtn");
+  $('#form').attr("action","delete");
+  form.append("<input type='hidden' name='boardId' value='"+boardId+"'>");
+  form.append("<input type='hidden' name='_method' value='delete'>");
+  form.submit();
+  })
+  $(document).on('click','#updateBtn',function (e) {
+  var str="<input class='form-control' width='250'" +
+  "placeholder='제목 입력' id='updateTitle'>";
+  $("#title").html(str);
+  str="<textarea class='form-control' placeholder='내용 입력'" +
+  "id='updateContent'></textarea>";
+  $("#content").html(str);
+  $("#updateBtn").attr("id","updateConfirmBtn");
 
 })
 
